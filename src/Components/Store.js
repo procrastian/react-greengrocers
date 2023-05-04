@@ -1,5 +1,6 @@
+import AddToCart from "./AddToCart";
 
-export default function Store ({storeState}) {
+export default function Store ({storeState, cartState, setCartState}) {
 
     return (
         <header id="store">
@@ -13,7 +14,7 @@ export default function Store ({storeState}) {
                             alt={`${item.name}`}
                         />
                     </div>
-                    <button>Add to cart</button>
+                    <AddToCart id={`${item.id}`} storeState={storeState} cartState={cartState} setCartState={setCartState}/>
                 </li>
               ))}
         </ul>
